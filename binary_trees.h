@@ -1,7 +1,8 @@
-#ifndef BINARY_TREES_H
-#define BINARY_TREES_H
+#ifndef _BINARY_TREES_H
+#define _BINARY_TREES_H
 
-#include <stddef.h>
+#include <stdlib.h>
+#include <unistd.h>
 
 /**
  * struct binary_tree_s - Binary tree node
@@ -18,16 +19,15 @@ struct binary_tree_s
     struct binary_tree_s *left;
     struct binary_tree_s *right;
 };
-
 typedef struct binary_tree_s binary_tree_t;
 
-/**
- * binary_tree_insert_left - Inserts a node to the left child
- * @parent: Pointer to the node to insert the left child
- * @value: Data to store in the new node
- * Return: Pointer to the new node, or NULL on failure
- */
-binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
+/* Function for testing */
+void binary_tree_print(const binary_tree_t *);
 
-#endif /* BINARY_TREES_H */
-
+/* Function for task */
+binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
+binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value);
+int binary_tree_is_leaf(const binary_tree_t *node);
+void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int));
+void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int));
+#endif
