@@ -28,6 +28,6 @@ typedef struct binary_tree_s binary_tree_t;
  * Return: Pointer to the new node, or NULL on failure
  */
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
-
+void binary_tree_print(const binary_tree_t *);
 #endif /* BINARY_TREES_H */
 
