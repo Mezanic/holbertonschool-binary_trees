@@ -1,9 +1,4 @@
 #include "binary_trees.h"
-<<<<<<< HEAD
-
-=======
-#include <stdlib.h>
->>>>>>> evrade_branch
 /**
  * binary_tree_node - Function that create a binary tree node
  * @parent: Pointer to the parent node to create
